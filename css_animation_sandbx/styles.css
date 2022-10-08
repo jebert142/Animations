@@ -1,0 +1,60 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Box Transformations */
+.parent {
+  background-color: hsla(200, 100%, 20%);
+  height: 400px;
+  width: 400px;
+}
+
+.child {
+  background-color: red;
+  height: 50%;
+  width: 50%;
+  animation: left-to-right 1s ease-in forwards 5 alternate;
+  /* transition: 1s cubic-bezier(1, 0.05, 0.39, 1.79); */
+}
+
+.parent:hover .child {
+  /* background-color: pink; */
+  /* animation-fill-mode: ;   This is used above with 'forwards' */
+  animation-play-state: paused;
+}
+
+/* Keyframes */
+@keyframes left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateY(100%);
+  }
+
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Table Animations */
+table,
+th,
+td {
+  width: 500px;
+  border: 1px solid;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.bar1 {
+  background-color: aquamarine;
+}
